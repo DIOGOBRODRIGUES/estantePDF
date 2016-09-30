@@ -1,5 +1,7 @@
 package br.rodrigues.estantepdf.negocio.beans;
 
+import java.util.Arrays;
+
 public class Livro extends Arquivo {
 	
 	private String editora;
@@ -34,6 +36,10 @@ public class Livro extends Arquivo {
 		this.cidade = cidade;
 	}
 	
+	@Override
+	public String toString(){
+		return Arrays.toString(getAutor())+", "+getAno()+". "+getTitulo()+". "+editora+". "+cidade+", "+edicao;
+	}
 	
 
 }

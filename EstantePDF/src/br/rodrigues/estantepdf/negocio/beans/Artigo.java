@@ -1,5 +1,7 @@
 package br.rodrigues.estantepdf.negocio.beans;
 
+import java.util.Arrays;
+
 public class Artigo extends Arquivo {
 	
 	private String revista;
@@ -59,6 +61,10 @@ public class Artigo extends Arquivo {
 		this.keywords = keywords;
 	}
 	
-	
+	@Override
+	public String toString(){
+		return Arrays.toString(getAutor())+". "+getTitulo()+". "+revista+". "+voulume+","+numero+", "+getPagina()+
+				", "+getAno();
+	}
 	
 }
