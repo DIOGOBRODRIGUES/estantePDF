@@ -37,11 +37,13 @@ public class DissertacaoTese extends Arquivo{
 		this.universidade = universidade;
 	}
 
-	
 	@Override
 	public String toString() {
-		return Arrays.toString(getAutor())+". "+getTitulo()+tipo+"( "+programa+"). "
-	    +universidade+". "+getPagina()+", "+getAno();
+		return String.format("DissertacaoTese / titulo = %s, programa=%s, universidade=%s, tipo=%s \n", super.getTitulo(), programa, universidade, tipo);
 	}
+
+
+	
+
 	
 }

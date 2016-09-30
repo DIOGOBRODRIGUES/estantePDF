@@ -21,19 +21,20 @@ public class GerenciadorPDF {
 		return instance;
 	}
 	
-	public void armzenarPDF(int tipo, Arquivo arquivo){
-		
-		switch (tipo) {
-		case 1:
-			//Arquivo aquivo=new Artigo(null, tipo, null, null, null, null, null, null, tipo, tipo);
-			break;
-
-		default:
-			break;
-		}
-		
-		
+	public void armzenarPDF(Arquivo arquivo){
+		repoPdf.adicionar(arquivo);		
 	}
+	
+	public void removerPDF(Arquivo arquivo){
+		repoPdf.remover(arquivo);
+	}
+
+	@Override
+	public String toString() {
+		return String.format("%s", repoPdf);
+	}
+	
+	
 	
 	
 	

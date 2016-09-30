@@ -38,4 +38,11 @@ public class RepositorioPDF {
 			resultado=a;
 		return resultado;
 	}
+
+	@Override
+	public String toString() {
+		return String.format("%s", listaArquivos);
+	}
+	
+	
 }

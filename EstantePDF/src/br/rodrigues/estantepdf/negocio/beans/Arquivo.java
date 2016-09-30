@@ -1,5 +1,7 @@
 package br.rodrigues.estantepdf.negocio.beans;
 
+import java.util.Arrays;
+
 //adicionar 
 public class Arquivo {
 	private String titulo;
@@ -39,6 +41,12 @@ public class Arquivo {
 	}
 	public void setAutor(Autor[] autor) {
 		this.autor = autor;
+	}
+
+	@Override
+	public String toString() {
+		return String.format("Arquivo [titulo=%s, ano=%s, pagina=%s, autor=%s]", titulo, ano, pagina,
+				Arrays.toString(autor));
 	}
 	
 	
