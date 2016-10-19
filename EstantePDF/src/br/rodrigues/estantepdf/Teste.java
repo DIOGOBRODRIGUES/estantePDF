@@ -12,6 +12,7 @@ public class Teste {
 	public static void main(String[] args) {
 		TelaTextual tt =new TelaTextual();
 		tt.testandoCRUD();
+//teste do git
 	}
 	
 //	public static void main(String[] args) {
