@@ -8,7 +8,7 @@ public class Artigo extends Arquivo {
 	private String dataPublicacao;
 	private String doi;
 	private String keywords[];
-	private int voulume;
+	private int volume;
 	private int numero;
 	
 	
@@ -19,16 +19,16 @@ public class Artigo extends Arquivo {
 		this.dataPublicacao = dataPublicacao;
 		this.doi = doi;
 		this.keywords = keywords;
-		this.voulume = voulume;
+		this.volume = voulume;
 		this.numero = numero;
 	}
 	
 	
-	public int getVoulume() {
-		return voulume;
+	public int getVolume() {
+		return volume;
 	}
-	public void setVoulume(int voulume) {
-		this.voulume = voulume;
+	public void setVolume(int voulume) {
+		this.volume = voulume;
 	}
 	public int getNumero() {
 		return numero;
@@ -60,11 +60,12 @@ public class Artigo extends Arquivo {
 	public void setKeywords(String[] keywords) {
 		this.keywords = keywords;
 	}
-	
+
+
 	@Override
 	public String toString(){
-		return Arrays.toString(getAutor())+". "+getTitulo()+". "+revista+". "+voulume+","+numero+", "+getPagina()+
-				", "+getAno();
+		return String.format("Artigo de Revista: Autor %s.  Titulo = %s, Revista= %s, v.%s, n.%s, p.%s, %s\n", Arrays.toString(getAutor()), getTitulo(), getRevista(),
+				getVolume(), getNumero(), getPagina(), getAno());
 	}
 	
 }

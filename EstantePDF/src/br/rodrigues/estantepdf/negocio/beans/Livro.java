@@ -38,7 +38,8 @@ public class Livro extends Arquivo {
 	
 	@Override
 	public String toString(){
-		return Arrays.toString(getAutor())+", "+getAno()+". "+getTitulo()+". "+editora+". "+cidade+", "+edicao;
+		return String.format("Livro = %s. Titulo= %s, editora= %s, %s\n", Arrays.toString(getAutor()),
+				getTitulo(), getEditora(), getAno());
 	}
 	
 
